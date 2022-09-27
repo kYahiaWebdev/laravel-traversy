@@ -1,3 +1,6 @@
+# TODOs
+###
+
 # Create DATABASE migration
 php artisan make:migration migration_name
 
@@ -9,15 +12,18 @@ php artisan migrate:refresh
 
 # Seed DATABASE
 php artisan db:seed
+php artisan db:seed --class=seeder_name
 
 # Refresh & Seed DATABASE
 php artisan migrate:refresh --seed
 
 # Create Eloquent model
 php artisan make:model model_name
+php artisan make:model model_name -m #generate linked migration
 
 # Create a factory
 php artisan make:factory factory_name
+php artisan meke:factory factory_name --model=model_name #link with the model
 
 #Create a controller
 php artisan make:controller controller_name

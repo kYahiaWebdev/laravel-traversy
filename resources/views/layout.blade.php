@@ -12,9 +12,10 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <script src="//unpkg.com/alpinejs" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script> tailwind.config = { theme: { extend: { colors: { laravel: "#ef3b2d", }, }, }, };</script>
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://cdn.tiny.cloud/1/9nyn9w1holmmqlmamz3f3q8gc62aggpxjfti1dte579b468c/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <title>LaraGigs | Find Laravel Projects</title>
     </head>
     <body class="mb-48">

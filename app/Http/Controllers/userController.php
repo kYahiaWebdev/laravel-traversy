@@ -54,4 +54,11 @@ class userController extends Controller
 
         return back()->withErrors(['email' => 'Invalid credentials'])->onlyInput('email');
     }
+
+    // public function destroy (User $id) {
+    //     $id->listings->delete();
+    //     $id->delete();
+    //     // dd($id);
+    //     return redirect('/')->with('message', 'User deleted succesfully');
+    // }
 }

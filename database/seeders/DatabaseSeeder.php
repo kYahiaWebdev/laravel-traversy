@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Listing;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Database\Seeders\TagsSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -73,5 +74,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call([
+            TagsSeeder::class
+        ]);
     }
 }

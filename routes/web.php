@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\listingController;
-use App\Http\Controllers\userController;
-use Illuminate\Support\Facades\Route;
 use App\Models\Listing ;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\tagController;
+use App\Http\Controllers\userController;
+use App\Http\Controllers\listingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,9 @@ Route::delete('/listing/{id}', [listingController::class, 'destroy'])->whereNumb
 
 Route::post('/listing/create', [listingController::class, 'store'])->middleware('auth');
 
+Route::get('/listing/{id}/tags', [listingController::class, 'tags_list']);
+
+
 // User auth
 
 Route::get('/register', [userController::class, 'create'])->middleware('guest');
@@ -49,6 +53,10 @@ Route::post('/logout', [userController::class, 'logout'])->middleware('auth');
 Route::get('/login', [userController::class, 'login'])->name('login')->middleware('guest');
 
 Route::post('/login', [userController::class, 'authenticate'])->middleware('guest');
+
+// Tags
+
+Route::get('/tag', [ tagController::class, 'suggest' ]);
 
 
 
